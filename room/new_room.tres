@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InteriorResource" load_steps=3 format=3 uid="uid://b1dd6kotrg1vh"]
+
+[ext_resource type="PackedScene" uid="uid://v12npm3y8h2y" path="res://room/glossy_interior/glossy_interior.tscn" id="1_3um3a"]
+[ext_resource type="Script" path="res://class/interior_resource.gd" id="1_p0voc"]
+
+[resource]
+script = ExtResource("1_p0voc")
+Interior_Name = "Example Name"
+Interior_Scene = ExtResource("1_3um3a")
+Style = "Typical"
+Cost = 0.0

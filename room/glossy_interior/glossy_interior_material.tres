@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b25upooduni33"]
+
+[resource]
+resource_name = "Right_Wall_Material.001"
+metallic = 1.0
+roughness = 0.0
