@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IslandResourceData" load_steps=2 format=3 uid="uid://dielv1vq51ayj"]
+
+[ext_resource type="Script" path="res://class/island_resource_data.gd" id="3_f1yee"]
+
+[resource]
+script = ExtResource("3_f1yee")
+Island_Name = ""
+AI_Horde_API_Key = ""
+Apartments = Array[Resource("res://class/apartment_resource_data.gd")]([])
+Copyright_Music = false
+Mall_Data = {}
+Other_Data = {}

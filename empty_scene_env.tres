@@ -1,0 +1,19 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://dxb62nhi67hka"]
+
+[ext_resource type="Texture2D" uid="uid://fpfw4xtima1b" path="res://room/glossy_interior/illovo_beach_balcony_1k.hdr" id="1_d3x0w"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cwitx"]
+panorama = ExtResource("1_d3x0w")
+
+[sub_resource type="Sky" id="Sky_va0cg"]
+sky_material = SubResource("PanoramaSkyMaterial_cwitx")
+
+[resource]
+sky = SubResource("Sky_va0cg")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+tonemap_mode = 3
+ssr_max_steps = 16
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false

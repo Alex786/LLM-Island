@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmsmdvej1jb1"]
+
+[ext_resource type="Script" path="res://fpsLabel.gd" id="1_ggukl"]
+[ext_resource type="Theme" uid="uid://cwnhk4kvcbt62" path="res://new_theme.tres" id="2_831qa"]
+[ext_resource type="Script" path="res://class/ai_horde.gd" id="4_j2egr"]
+[ext_resource type="Script" path="res://class/room_select.gd" id="4_ulabo"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, -7, 7.5, 8)
+current = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.0138889
+anchor_top = 0.0246914
+anchor_right = 0.986111
+anchor_bottom = 0.975309
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_831qa")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("1_ggukl")
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Generate text"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_following = true
+shortcut_keys_enabled = false
+
+[node name="RoomSelect" type="Node" parent="."]
+script = ExtResource("4_ulabo")
+
+[node name="AIHorde" type="HTTPRequest" parent="."]
+use_threads = true
+accept_gzip = false
+script = ExtResource("4_j2egr")

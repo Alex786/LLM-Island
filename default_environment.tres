@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://jdqcsyxno235"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iseys"]
+load_path = "res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.bptc.ctex"
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0jo5a"]
+panorama = SubResource("CompressedTexture2D_iseys")
+
+[sub_resource type="Sky" id="Sky_g5o71"]
+sky_material = SubResource("PanoramaSkyMaterial_0jo5a")
+
+[resource]
+sky = SubResource("Sky_g5o71")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+tonemap_mode = 3
+ssr_max_steps = 16
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
