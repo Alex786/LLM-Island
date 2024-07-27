@@ -25,6 +25,10 @@ window/ios/hide_home_indicator=false
 window/ios/hide_status_bar=false
 window/ios/suppress_ui_gesture=false
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [layer_names]
 
 3d_render/layer_1="Residents + moving"

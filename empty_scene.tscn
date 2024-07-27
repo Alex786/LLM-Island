@@ -53,5 +53,4 @@ script = ExtResource("4_ulabo")
 
 [node name="AIHorde" type="HTTPRequest" parent="."]
 use_threads = true
-accept_gzip = false
 script = ExtResource("4_j2egr")
