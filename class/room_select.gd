@@ -3,7 +3,7 @@ extends Node
 class_name RoomSelect
 
 #Description for class
-##Node used to handle information about current room/area and handing transitions between rooms/areas.
+##Node used to handle information about current room and handing transitions between rooms.
 
 @onready var island_data: IslandResourceData = preload("res://island_test_resource.tres")
 @onready var room_num: int
@@ -15,7 +15,6 @@ func room(_random_room: Node) -> void:
 
 
 func _ready() -> void:
-	#room_num = randi_range(0, 0)
-	#var room_selected = island_data.Residents[room_num].Interior_Resource.Interior_Scene.instantiate()
-	#room(room_selected)
-	pass
+	room_num = randi_range(0, 0)
+	var room_selected = island_data.Apartments[room_num].Interior_Resource.Interior_Scene.instantiate()
+	room(room_selected)

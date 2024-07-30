@@ -27,7 +27,7 @@ class_name AIHorde
 ## delimited api key
 var delimited_api_key: String = AI_Horde_API_Key + ":"
 
-var payload: Dictionary = {
+@export var payload: Dictionary = {
 	"prompt": "What are your thoughts on corn?",
 	"params": {
 		"n": 1,
@@ -101,4 +101,4 @@ func _http_request_completed(_result, response_code, _headers, body):
 	var response = json2.get_data()
 
 	# Will print
-	print(response, response_code)
+	print("Response Code: ", response_code, "\n", "Response: ", response)

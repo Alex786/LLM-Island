@@ -1,3 +1,6 @@
-[gd_resource type="Theme" format=3 uid="uid://cwnhk4kvcbt62"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cwnhk4kvcbt62"]
+
+[ext_resource type="FontFile" uid="uid://dlxmp6kb8qy17" path="res://Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf" id="1_rmm0d"]
 
 [resource]
+default_font = ExtResource("1_rmm0d")

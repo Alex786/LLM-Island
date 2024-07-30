@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://fpfw4xtima1b"
 path.bptc="res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.bptc.ctex"
+path.astc="res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.astc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://room/glossy_interior/illovo_beach_balcony_1k.hdr"
-dest_files=["res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.bptc.ctex"]
+dest_files=["res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.bptc.ctex", "res://.godot/imported/illovo_beach_balcony_1k.hdr-cb0054616eae15f6a0360e425cdcfc55.astc.ctex"]
 
 [params]
 

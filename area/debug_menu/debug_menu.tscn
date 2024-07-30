@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc4r6xrd8446q"]
+
+[ext_resource type="Theme" uid="uid://cwnhk4kvcbt62" path="res://new_theme.tres" id="1_beust"]
+[ext_resource type="Script" path="res://area/debug_menu/RTCLabel.gd" id="1_bngsu"]
+[ext_resource type="Script" path="res://fpsLabel.gd" id="1_folr1"]
+[ext_resource type="Script" path="res://area/debug_menu/IslanndDataLabel.gd" id="4_juqn2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_left = 0.0125
+anchor_top = 0.0222222
+anchor_right = 0.9875
+anchor_bottom = 0.977778
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_beust")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="InfoContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="FPSLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+layout_mode = 2
+text = "FPS: "
+horizontal_alignment = 1
+vertical_alignment = 3
+script = ExtResource("1_folr1")
+
+[node name="RTCLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+layout_mode = 2
+text = "Clock = "
+horizontal_alignment = 1
+vertical_alignment = 3
+script = ExtResource("1_bngsu")
+
+[node name="IslanndDataLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 3
+script = ExtResource("4_juqn2")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Empty_Scene"
+
+[node name="Button2" type="Button" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Empty_Scene"
+
+[node name="Button3" type="Button" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Empty_Scene"
+
+[node name="Button4" type="Button" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Empty_Scene"
+
+[node name="Button5" type="Button" parent="HBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Empty_Scene"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResidentResource" load_steps=2 format=3 uid="uid://c5jy68dq441f2"]
+
+[ext_resource type="Script" path="res://class/resident_resource.gd" id="1_ie8c8"]
+
+[resource]
+script = ExtResource("1_ie8c8")
+Resident_Name = ""

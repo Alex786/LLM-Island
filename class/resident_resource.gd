@@ -2,3 +2,10 @@
 extends Resource
 class_name ResidentResource
 
+## Resource Used for residents
+
+# Name for resident
+@export var Resident_Name: String = ""
+
+# Packed Scene
+@export var Resident_Scene: PackedScene

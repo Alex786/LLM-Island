@@ -1,12 +1,24 @@
-[gd_resource type="Resource" script_class="IslandResourceData" load_steps=2 format=3 uid="uid://dielv1vq51ayj"]
+[gd_resource type="Resource" script_class="IslandResourceData" load_steps=7 format=3 uid="uid://dielv1vq51ayj"]
 
+[ext_resource type="Resource" uid="uid://b1dd6kotrg1vh" path="res://room/new_room.tres" id="1_o6u5b"]
+[ext_resource type="Script" path="res://class/resident_resource.gd" id="2_qtfrf"]
 [ext_resource type="Script" path="res://class/island_resource_data.gd" id="3_f1yee"]
+[ext_resource type="Script" path="res://class/apartment_resource_data.gd" id="3_ir83w"]
+
+[sub_resource type="Resource" id="Resource_y0h4o"]
+script = ExtResource("2_qtfrf")
+Resident_Name = ""
+
+[sub_resource type="Resource" id="Resource_6ocif"]
+script = ExtResource("3_ir83w")
+Resident_Resource = SubResource("Resource_y0h4o")
+Interior_Resource = ExtResource("1_o6u5b")
 
 [resource]
 script = ExtResource("3_f1yee")
-Island_Name = ""
+Island_Name = "Crazy"
 AI_Horde_API_Key = ""
-Apartments = Array[Resource("res://class/apartment_resource_data.gd")]([])
+Apartments = Array[ExtResource("3_ir83w")]([SubResource("Resource_6ocif")])
 Copyright_Music = false
 Mall_Data = {}
 Other_Data = {}
