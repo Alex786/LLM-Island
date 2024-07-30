@@ -1,21 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc4r6xrd8446q"]
+[gd_scene load_steps=7 format=3 uid="uid://dc4r6xrd8446q"]
 
 [ext_resource type="Theme" uid="uid://cwnhk4kvcbt62" path="res://new_theme.tres" id="1_beust"]
 [ext_resource type="Script" path="res://area/debug_menu/RTCLabel.gd" id="1_bngsu"]
 [ext_resource type="Script" path="res://fpsLabel.gd" id="1_folr1"]
+[ext_resource type="Script" path="res://area/debug_menu/ButtonFocus.gd" id="2_3ghts"]
 [ext_resource type="Script" path="res://area/debug_menu/IslanndDataLabel.gd" id="4_juqn2"]
+[ext_resource type="Script" path="res://area/debug_menu/ExitButton.gd" id="5_tqth4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchor_left = 0.0125
-anchor_top = 0.0222222
-anchor_right = 0.9875
-anchor_bottom = 0.977778
+anchor_left = 0.01875
+anchor_top = 0.0333333
+anchor_right = 0.98125
+anchor_bottom = 0.966667
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_beust")
+script = ExtResource("2_3ghts")
 metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -35,22 +38,34 @@ alignment = 1
 
 [node name="FPSLabel" type="Label" parent="HBoxContainer/InfoContainer"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 15
 text = "FPS: "
 horizontal_alignment = 1
-vertical_alignment = 3
+vertical_alignment = 1
 script = ExtResource("1_folr1")
 
 [node name="RTCLabel" type="Label" parent="HBoxContainer/InfoContainer"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 15
 text = "Clock = "
 horizontal_alignment = 1
-vertical_alignment = 3
+vertical_alignment = 1
 script = ExtResource("1_bngsu")
 
 [node name="IslanndDataLabel" type="Label" parent="HBoxContainer/InfoContainer"]
+custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 15
+text = "IslandData
+Residents"
 horizontal_alignment = 1
-vertical_alignment = 3
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
 script = ExtResource("4_juqn2")
 
 [node name="ButtonContainer" type="VBoxContainer" parent="HBoxContainer"]
@@ -60,20 +75,16 @@ alignment = 1
 
 [node name="Button" type="Button" parent="HBoxContainer/ButtonContainer"]
 layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 6
 text = "Empty_Scene"
 
-[node name="Button2" type="Button" parent="HBoxContainer/ButtonContainer"]
+[node name="ExitButton" type="Button" parent="HBoxContainer/ButtonContainer"]
 layout_mode = 2
-text = "Empty_Scene"
+size_flags_horizontal = 5
+size_flags_vertical = 6
+action_mode = 0
+text = "Exit"
+script = ExtResource("5_tqth4")
 
-[node name="Button3" type="Button" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-text = "Empty_Scene"
-
-[node name="Button4" type="Button" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-text = "Empty_Scene"
-
-[node name="Button5" type="Button" parent="HBoxContainer/ButtonContainer"]
-layout_mode = 2
-text = "Empty_Scene"
+[connection signal="pressed" from="HBoxContainer/ButtonContainer/ExitButton" to="HBoxContainer/ButtonContainer/ExitButton" method="_on_pressed"]
